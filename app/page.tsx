@@ -64,12 +64,12 @@ export default function Home() {
               Personal Homepage
             </p>
 
-            <h1 className="max-w-3xl text-4xl font-bold leading-tight text-zinc-900 md:text-6xl">
+            <h1 className="max-w-3xl text-4xl font-bold leading-[1.08] text-zinc-900 md:text-6xl">
               你好，我是
               <span className="ml-3 text-sky-700">ZenviorX</span>
             </h1>
 
-            <p className="mt-6 max-w-2xl text-base leading-8 text-zinc-600 md:text-lg">
+            <p className="mt-6 max-w-[46rem] text-base leading-8 text-zinc-600 md:text-lg">
               这里是我的个人主页。我希望它既能承载网络安全学习记录，
               也能展示摄影作品、课程实验与个人表达。当前版本正在逐步向更完整、
               更统一、也更有气质的风格继续完善。
@@ -78,14 +78,14 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/photowall"
-                className="rounded-2xl bg-zinc-900 px-5 py-3 text-sm font-semibold text-white transition hover:scale-[1.02] hover:bg-zinc-800"
+                className="rounded-2xl bg-sky-700 px-5 py-3 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(3,105,161,0.22)] transition hover:scale-[1.02] hover:bg-sky-800"
               >
                 进入光影画廊
               </Link>
 
               <a
                 href="#featured"
-                className="rounded-2xl border border-white/50 bg-white/60 px-5 py-3 text-sm font-semibold text-zinc-800 transition hover:bg-white/80"
+                className="rounded-2xl border border-sky-100 bg-white/72 px-5 py-3 text-sm font-semibold text-zinc-800 shadow-sm transition hover:border-sky-200 hover:bg-white"
               >
                 查看主页内容
               </a>
@@ -95,7 +95,7 @@ export default function Home() {
               {quickStats.map((item) => (
                 <div
                   key={item.label}
-                  className="rounded-2xl border border-white/60 bg-white/55 px-4 py-5 shadow-sm"
+                  className="rounded-2xl border border-white/70 bg-white/68 px-4 py-5 shadow-[0_8px_20px_rgba(15,23,42,0.05)]"
                 >
                   <div className="text-2xl font-bold text-zinc-900">
                     {item.value}
@@ -112,7 +112,7 @@ export default function Home() {
                 <img
                   src="/images/avatar.jpg"
                   alt="avatar"
-                  className="h-72 w-full object-cover"
+                  className="h-72 w-full object-cover transition duration-500 hover:scale-[1.03]"
                 />
               </div>
 
