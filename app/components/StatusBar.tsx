@@ -41,7 +41,7 @@ export default function StatusBar() {
   const { days, hours } = getUptimeParts(startDate, now);
 
   return (
-    <div className="text-white font-semibold text-lg flex gap-4">
+    <div className="text-sky-700 font-semibold text-lg flex gap-4">
       <div className="text-3xl">{formatNow(now)}</div>
       <div className="text-xl">
         系统已稳定运行：{days}天 {hours}小时
