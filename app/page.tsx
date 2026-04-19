@@ -43,7 +43,7 @@ export default function Home() {
               Personal Homepage
             </p>
             <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">
-              你好，我是 Toby
+              你好，我是ZenviorX
             </h1>
             <p className="mb-8 max-w-2xl text-lg leading-8 text-zinc-300">
               山东大学网络空间安全学院学生，正在学习密码学、网络安全与开发。
