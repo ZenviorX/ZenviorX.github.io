@@ -1,4 +1,5 @@
 module.exports = {
+  output: 'export',
   exportTrailingSlash: true,
   basePath: '/zenviorxpage', // 如果部署在 GitHub Pages 的子路径下，修改为你的仓库名称
   assetPrefix: '/zenviorxpage/', // 配置静态资源路径
