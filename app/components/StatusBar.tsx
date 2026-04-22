@@ -50,7 +50,7 @@ export default function StatusBar() {
 
   return (
     <div className="glass-panel-light rounded-[28px] p-4 md:p-5">
-      <div className="grid gap-5 md:grid-cols-[420px_1fr] md:items-center">
+      <div className="grid gap-5 md:grid-cols-[450px_1fr] md:items-center">
         <div className="rounded-2xl border border-white/70 bg-white/72 px-5 py-4 shadow-[0_8px_20px_rgba(15,23,42,0.05)]">
           <div className="text-sm font-medium text-zinc-500">站点状态</div>
 
