@@ -92,11 +92,11 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
               {quickStats.map((item) => (
                 <div
                   key={item.label}
-                  className="rounded-2xl border border-white/75 bg-white/72 px-6 py-5 shadow-[0_8px_20px_rgba(15,23,42,0.05)]"
+                  className="rounded-2xl border border-white/75 bg-white/72 px-5 py-4 shadow-[0_8px_20px_rgba(15,23,42,0.05)]"
                 >
                   <div className="text-[2rem] font-bold leading-none text-zinc-900">
                     {item.value}
