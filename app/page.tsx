@@ -92,35 +92,30 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="mt-10 rounded-[28px] border border-white/70 bg-white/58 p-5 shadow-[0_14px_36px_rgba(15,23,42,0.06)] md:p-7">
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                {quickStats.map((item) => (
-                  <div
-                    key={item.label}
-                    className="rounded-2xl border border-white/80 bg-white/78 px-5 py-5 shadow-[0_8px_20px_rgba(15,23,42,0.05)]"
-                  >
-                    <div className="text-2xl font-bold text-zinc-900 md:text-3xl">
-                      {item.value}
-                    </div>
-                    <div className="mt-2 text-sm text-zinc-500">{item.label}</div>
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+              {quickStats.map((item) => (
+                <div
+                  key={item.label}
+                  className="rounded-2xl border border-white/75 bg-white/72 px-6 py-5 shadow-[0_8px_20px_rgba(15,23,42,0.05)]"
+                >
+                  <div className="text-[2rem] font-bold leading-none text-zinc-900">
+                    {item.value}
                   </div>
-                ))}
-              </div>
+                  <div className="mt-3 text-sm text-zinc-500">{item.label}</div>
+                </div>
+              ))}
+            </div>
 
-              <div
-                id="about"
-                className="mt-6 border-t border-white/70 pt-6 md:mt-7 md:pt-7"
-              >
-                <div className="mb-3 text-sm text-zinc-500">关于这个主页</div>
-                <h2 className="max-w-3xl text-3xl font-bold leading-tight text-sky-700 md:text-5xl">
-                  不只是展示页，更像一个会持续生长的个人空间
-                </h2>
-                <p className="mt-5 max-w-3xl text-base leading-8 text-zinc-600 md:text-lg">
-                  我不希望这个网站只是把个人信息简单堆上去。
-                  我更想让它逐渐变成一个有连续性、有审美、也有内容沉淀的空间：
-                  可以记录学习，整理项目，也可以展示摄影和生活中的观察。
-                </p>
-              </div>
+            <div id="about" className="mt-10">
+              <div className="mb-4 text-sm text-zinc-500">关于这个主页</div>
+              <h2 className="max-w-4xl text-3xl font-bold leading-tight text-sky-700 md:text-5xl">
+                不只是展示页，更像一个会持续生长的个人空间
+              </h2>
+              <p className="mt-6 max-w-4xl text-base leading-8 text-zinc-600 md:text-lg">
+                我不希望这个网站只是把个人信息简单堆上去。
+                我更想让它逐渐变成一个有连续性、有审美、也有内容沉淀的空间：
+                可以记录学习，整理项目，也可以展示摄影和生活中的观察。
+              </p>
             </div>
           </div>
 
@@ -145,30 +140,6 @@ export default function Home() {
             </div>
 
             <StatusBar />
-          </div>
-        </section>
-
-        <section id="about" className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="glass-panel-light rounded-[28px] p-8">
-            <div className="mb-4 text-sm text-zinc-500">关于这个主页</div>
-            <h2 className="text-3xl font-bold text-zinc-900">
-              不只是展示页，更像一个会持续生长的个人空间
-            </h2>
-            <p className="mt-5 max-w-3xl text-base leading-8 text-zinc-600">
-              我不希望这个网站只是把个人信息简单堆上去。
-              我更想让它逐渐变成一个有连续性、有审美、也有内容沉淀的空间：
-              可以记录学习，整理项目，也可以展示摄影和生活中的观察。
-            </p>
-          </div>
-
-          <div className="glass-panel-light rounded-[28px] p-8">
-            <div className="mb-4 text-sm text-zinc-500">首页风格目标</div>
-            <ul className="space-y-3 text-sm leading-7 text-zinc-600">
-              <li>更明亮、更清爽</li>
-              <li>保留毛玻璃卡片感</li>
-              <li>留白充足，层次清晰</li>
-              <li>看起来像个人站，而不是模板页</li>
-            </ul>
           </div>
         </section>
 
