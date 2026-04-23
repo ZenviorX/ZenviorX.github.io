@@ -65,13 +65,13 @@ export default function StatusBar() {
         </div>
 
         <div className="border-t border-white/60 px-4 py-3 lg:border-l lg:border-t-0 lg:border-white/60">
-          <div className="inline-flex items-center gap-2 rounded-full bg-rose-50 px-3 py-1 text-[0.82rem] font-semibold text-zinc-700">
+          <div className="inline-flex items-center gap-2 rounded-full bg-rose-100 px-3 py-1 text-[0.82rem] font-semibold text-zinc-700">
             <img
               src="/icon/heart.svg"
               alt="Heart"
               className="h-4 w-4 animate-pulse"
             />
-            <span>系统已稳定运行：</span>
+            <span>站点已稳定运行：</span>
           </div>
 
           <div className="mt-2.5 text-[1rem] font-bold text-sky-700 md:text-[1.08rem]">
