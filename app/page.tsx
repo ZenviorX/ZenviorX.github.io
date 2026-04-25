@@ -22,8 +22,8 @@ const featuredCards = [
 export default function Home() {
   return (
     <>
-      <section className="grid items-start gap-6 lg:grid-cols-[1.55fr_0.6fr]">
-        <div className="glass-panel-light glass-panel-strong rounded-[28px] p-6 md:p-7">
+      <section className="grid gap-6 lg:grid-cols-[1.55fr_0.6fr] lg:items-stretch">
+        <div className="glass-panel-light glass-panel-strong h-full rounded-[28px] p-6 md:p-7">
           <p className="mb-4 text-xs uppercase tracking-[0.35em] text-zinc-500">
             Personal Homepage
           </p>
@@ -57,14 +57,19 @@ export default function Home() {
 
           <div id="about" className="mt-10">
             <div className="mb-4 text-sm text-zinc-500">关于这个主页</div>
-            <h2 className="max-w-4xl text-2xl font-bold leading-[1.2] text-sky-700 md:text-[1.7rem]">
+            <h2 className="max-w-4xl text-[1.7rem] font-bold leading-[1.15] text-sky-700 md:text-[2.1rem]">
               不只是展示页，更像一个会持续生长的个人空间
             </h2>
+            <p className="mt-4 max-w-4xl text-base leading-8 text-zinc-600 md:text-lg">
+              我不希望这个网站只是把个人信息简单堆上去。
+              我更想让它逐渐变成一个有连续性、有审美、也有内容沉淀的空间：
+              可以记录学习，整理项目，也可以展示摄影和生活中的观察。
+            </p>
           </div>
         </div>
 
         <div className="flex flex-col gap-6">
-          <div className="glass-panel-light glass-panel-strong rounded-[28px] p-5">
+          <div className="glass-panel-light glass-panel-strong flex h-full flex-col rounded-[28px] p-5">
             <div className="overflow-hidden rounded-2xl">
               <img
                 src="/images/avatar.jpg"
@@ -73,7 +78,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="mt-5">
+            <div className="mt-5 flex-1">
               <h2 className="text-center text-3xl font-bold text-sky-700">
                 ZenviorX
               </h2>
@@ -137,7 +142,10 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="glass-panel-light glass-panel-strong rounded-[28px] p-8" id="contact">
+        <div
+          className="glass-panel-light glass-panel-strong rounded-[28px] p-8"
+          id="contact"
+        >
           <div className="mb-4 text-sm text-zinc-500">Contact</div>
           <h2 className="text-2xl font-bold text-zinc-900">联系方式</h2>
           <div className="mt-5 space-y-3 text-sm text-zinc-600">
