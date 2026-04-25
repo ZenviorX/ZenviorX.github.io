@@ -4,11 +4,19 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.18);
+  --glass-bg-strong: rgba(255, 255, 255, 0.24);
+  --glass-border: rgba(255, 255, 255, 0.32);
+  --glass-highlight: rgba(255, 255, 255, 0.62);
+  --glass-shadow: rgba(15, 23, 42, 0.16);
+}
+
 body {
   margin: 0;
-  background: #f3f6fb;
   color: #27272a;
   font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #dfe7f1;
 }
 
 * {
@@ -20,76 +28,115 @@ a {
   text-decoration: none;
 }
 
+/* 全站背景 */
+.site-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  overflow: hidden;
+}
+
+.site-bg-image {
+  position: absolute;
+  inset: -24px;
+  background-image: url("/images/starry-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(8px) brightness(0.78) saturate(1.08);
+  transform: scale(1.06);
+}
+
+.site-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(233, 239, 247, 0.34) 0%,
+      rgba(231, 237, 246, 0.46) 40%,
+      rgba(228, 235, 244, 0.58) 100%
+    ),
+    radial-gradient(
+      circle at top left,
+      rgba(255, 255, 255, 0.14),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 78% 18%,
+      rgba(255, 255, 255, 0.1),
+      transparent 24%
+    );
+}
+
+/* 玻璃面板 */
 .glass-panel-light {
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 10px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
   padding: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 14px 32px var(--glass-shadow),
+    inset 0 1px 0 var(--glass-highlight);
 }
 
-.glass-panel-light .text-lg.font-bold {
-  font-size: 1.125rem;
+.glass-panel-strong {
+  background: var(--glass-bg-strong);
+  backdrop-filter: blur(24px) saturate(150%);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  box-shadow:
+    0 16px 36px rgba(15, 23, 42, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+/* 首屏标题 */
+.hero-title {
+  font-size: 2.0rem;
+  line-height: 1.08;
   font-weight: 700;
-  color: #1f2937; /* 深色 */
+  color: #111827;
 }
 
-.glass-panel-light .text-3xl {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #0284c7; /* 时间蓝色 */
+@media (min-width: 720px) {
+  .hero-title {
+    font-size: 3rem;
+  }
 }
 
-.glass-panel-light .text-xl.font-semibold {
-  font-size: 1.25rem;
-  font-weight: 600;
+.hero-title-accent {
+  color: #0284c7;
 }
 
-.glass-panel-light .flex.justify-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.glass-panel-light .space-y-4 {
-  margin-bottom: 15px;
-}
-
-.glass-panel-light .flex.items-center {
-  display: flex;
-  align-items: center;
-}
-
+/* 导航 */
 nav a {
   font-weight: 600;
-  text-transform: uppercase;
 }
 
-.status-bar {
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
-  padding: 10px;
-  color: #000;
-}
-
+/* 状态栏 */
 .status-wrap {
-  background: linear-gradient(135deg, rgba(199, 210, 254, 0.55), rgba(244, 114, 182, 0.18));
-  border: 1px solid rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0.1)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   box-shadow:
-    0 10px 28px rgba(15, 23, 42, 0.08),
+    0 12px 28px rgba(15, 23, 42, 0.14),
     inset 0 1px 0 rgba(255, 255, 255, 0.62);
 }
 
 .status-time {
-  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  background: linear-gradient(180deg, #101726 0%, #09111d 100%);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .status-main {
-  background: rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.14);
 }
 
 .status-badge {
@@ -97,8 +144,8 @@ nav a {
   align-items: center;
   border-radius: 14px;
   padding: 10px 16px;
-  background: rgba(255, 255, 255, 0.62);
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.26);
+  border: 1px solid rgba(255, 255, 255, 0.34);
   color: #475569;
   font-weight: 600;
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);

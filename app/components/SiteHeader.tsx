@@ -22,7 +22,7 @@ export default function SiteHeader() {
 
   return (
     <header className="sticky top-4 z-20 mb-10">
-      <div className="glass-panel-light flex items-center justify-between rounded-2xl px-5 py-4">
+      <div className="glass-panel-light glass-panel-strong flex items-center justify-between rounded-2xl px-5 py-4">
         <Link
           href="/"
           className="text-lg font-semibold tracking-wide text-zinc-900"
